@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB players</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Random MLB players ⚾</h1>
+        <div>
+            <% if (name !== "Your Random player is...") { %>
+                <h2><%= name %></h2>
+                <p><span>Debut year: </span><%= debut %></p>
+                <p><span>Age: </span><%= age %></p>
+                <p><span>Height: </span><%= height %></p>
+                <p><span>Weight: </span><%= weight %></p>
+                <p><span>Is active?: </span><%= active %></p>
+                <p><span>Birthplace: </span><%= birthplace %></p>
+                <p><span>Position: </span><%= position %></p>
+                <p><span>Team: </span><%= team %></p>
+            <% } else { %>
+                <p><%= name %></p>
+            <% } %>
+
+        </div>
+        
+
+        <form id="myForm" method="post" action="/get-random-player">
+            <input type="submit" value="Get Random Player" formaction="/get-random-player">
+        </form>
+        
+        
+    </div>
+    <footer>
+        <p>Made with ❤️ by Ariel Soriano</p>
+    </footer>
+</body>
+</html>
