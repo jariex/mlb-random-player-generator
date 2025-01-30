@@ -1,7 +1,8 @@
+import 'dotenv/config'
 import express from "express";
 import axios from "axios";
 import { name } from "ejs";
-import env from "dotenv";
+
 
 const app = express();
 const port = 3000;
